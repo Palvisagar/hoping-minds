@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form</title>
+</head>
+<style>
+    form{
+        margin: 100px;
+        font-size: large;
+    }
+    h1{
+        text-align: center;
+        text-decoration: underline;
+    }
+    legend{
+        color: cornflowerblue;
+    }
+    fieldset{
+        margin-top: 5px;
+    }
+    label{
+        margin-top: 10px;
+    }
+    input{
+        margin-top: 10px;
+    }
+    button{
+        margin: 10px;
+    }
+</style>
+<body>
+    <form>
+        <h1>Form</h1>
+        <fieldset>
+            <legend>Personal_detail</legend>
+            <label for="firstname">First_name</label>
+            <input type="text" id="firstname" placeholder="enter your first_name"><br>
+            <label for="lastname">Last_name</label>
+            <input type="text" id="lastname" placeholder="enter your last_name"><br>
+            <label for="location">Location</label>
+            <input type="text" id="location" placeholder="location"><br>
+            <label for="gender">Gender</label>
+            <input type="radio" id="gender" name="male">Male
+            <input type="radio" id="gender" name="female">female
+            <input type="radio" id="gender" name="others">Other<br>
+            <label for="DOB">DOB</label>
+            <input type="date"><br>
+            <label>Employment Status</label>
+            <input type="checkbox">Employed
+            <input type="checkbox">Unemployed
+            <input type="checkbox">Selfemployed<br>
+            <label for="state">State</label>
+            <input type="text" list="state">
+            <datalist id="state">
+                <option value="INDIA">
+                <option value="USA">
+                <option value="CANADA">
+                <option value="UK">
+
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Select_Box</legend>
+            <select name="drop"  autofocus="true">
+                <option disabled selected>select</option>
+                <option value="ABC">ABC</option>
+                <option value="DEF">DEF</option>
+                <option value="GHI">GHI</option>
+                <option value="JKL">JKL</option>
+            </select>
+        </fieldset>
+        <button type="submit">Submit</button>
+        <button type="submit">Cancel</button>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body> 
+    <form>
+        <fieldset>
+            <legend>Personal detail</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Name"><br><br>
+            <label for="address">Address</label>
+            <input type="text" id="address" placeholder="Address" value="Sector 75"><br><br>
+            <label for="gender">Gender</label>
+            <input type="radio" id="gender"  name="gender"  value="Male" checked>Male
+            <input type="radio" id="gender"  name="gender" value="female">Female
+            <input type="radio" id="gender"  name="gender" value="others">Others<br><br>
+            <label for="dob">DOB</label> 
+            <input type="date" id="dob"><br><br>
+            <label>Employment status</label>
+            <input type="checkbox">Employed
+            <input type="checkbox">Unemployed
+            <input type="checkbox">Selfemployed<br><br>
+            <label>Country Name</label>
+            <input type="text" list="country">
+            <datalist id="country">
+                <option value="India">
+                <option value="USA">
+                <option value="CANADA">
+                <option value="FRANCE">
+                <option value="NEPAL">
+                    <option value="Finland">
+                        <option value="newzland">
+
+            </datalist>
+        </fieldset>
+        <fieldset>
+            <legend>Select Box</legend>
+            <select name="drop" autofocus="true">
+                <option disabled selected>Select</option>
+                <option value="ABC">ABC</option>
+                <option value="DEF">DEF</option>
+                <option value="GHI">GHI</option>
+                <option value="JKL">JKL</option>
+                <option value="MNO">MNO</option>
+            </select>
+            
+            <input type="submit">
+        </fieldset>
+    </form>
+</body>
+</html>

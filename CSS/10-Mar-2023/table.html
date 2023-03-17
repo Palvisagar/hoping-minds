@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Table</title>
+</head>
+<body>
+    
+    <table>
+        <colgroup>
+            <col span="4" id="colg">
+        </colgroup>
+
+        <tr>
+            <th colspan="5">Trainers Table</th>
+        </tr>
+        <tr>
+            <th colspan="2">FSD Trainer</th>
+            <th>DS Trainer</th>
+            <th>PDP Trainer</th>
+            <th>APTITUDE Trainer</th>
+        </tr>
+        <tr>
+            <td rowspan="2">Astha</td>
+            <td>Anita</td>
+            <td>Somsirsa</td>
+            <td>Sangeeta</td>
+            <td>Balwinder</td>
+        </tr>
+        <tr>
+            <td>Anita</td>
+            <td>Somsirsa</td>
+            <td>Sangeeta</td>
+            <td>Balwinder</td>
+        </tr>
+        <tr>
+            <td>Anita</td>
+            <td>Astha</td>
+            <td>Somsirsa</td>
+            <td>Sangeeta</td>
+            <td>Balwinder</td>
+        </tr>
+        
+    </table>
+</body>
+<style>
+    #colg{
+        background-color: aqua;
+    }
+    table,th,td{
+        border: 2px solid;
+        border-collapse: collapse;
+        padding: 5px;
+    }
+    td:nth-child(5){
+background-color: palevioletred;
+    }
+    td:nth-child(4){
+        background-color: gray;
+    }
+</style>
+</html>

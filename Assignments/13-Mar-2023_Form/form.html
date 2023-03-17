@@ -1,0 +1,191 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Registration Form</title>
+</head>
+<style>
+    /* form{
+        margin:50px;
+    } */
+    fieldset{
+        border: 2px solid cadetblue;
+        width:700px;
+        margin-top:5px;
+        margin-left: 250px;
+    }
+    h1,h2{
+        color: darkcyan;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+    }
+   
+    button{
+        margin-top:10px;
+        margin-left: 250px;
+    }
+</style>
+<body>
+    <form>
+    <h1>O7 SERVICES</h1>
+    <h2>Registration Form</h2>
+
+    <fieldset>
+        <legend><span class="number"></span>Personal Details</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Father's Name</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="Father_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Mother's Name</label>
+                </td>
+                <td>
+                    <input type="number" id="name" name="mother_name">
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="name">Location</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="user_name">
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend><span class="number"></span>Basic Information</legend>
+        <table>
+            <tr>
+                <td>
+                    <label for="name">Name:</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Email:</label>
+                </td>
+                <td>
+                    <input type="email" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Contact no.</label>
+                </td>
+                <td>
+                    <input type="number" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">DOB</label>
+                </td>
+                <td>
+                    <input type="date" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="gender">Gender</label>
+                </td>
+                <td>
+                    <input type="radio" id="gender" name="male">Male
+                    <input type="radio" id="gender" name="female">female
+                    <input type="radio" id="gender" name="others">Other<br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Address</label>
+                </td>
+                <td>
+                    <input type="text" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="name">Pin-Code</label>
+                </td>
+                <td>
+                    <input type="number" id="name" name="user_name">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label for="state">State</label>
+                </td>
+                <td>
+                    <input type="text" list="state">
+                    <datalist id="state">
+                        <option value="Punjab">
+                        <option value="Haryana">
+                        <option value="Himachal">
+                    </datalist>
+                </td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <fieldset>
+        <legend>Job Role</legend>
+    <label for="job">Job Role:</label>
+    <select id="job" name="user_job">
+        <optgroup label="Web">
+        <option value="frontend_developer">Front-End Developer</option>
+        <option value="php_developor">PHP Developer</option>
+        <option value="python_developer">Python Developer</option>
+        <option value="rails_developer"> Rails Developer</option>
+        <option value="web_designer">Web Designer</option>
+        <option value="WordPress_developer">WordPress Developer</option>
+        </optgroup>
+        <optgroup label="Mobile">
+        <option value="Android_developer">Androild Developer</option>
+        <option value="iOS_developer">iOS Developer</option>
+        <option value="mobile_designer">Mobile Designer</option>
+        </optgroup>
+        <optgroup label="Business">
+        <option value="business_owner">Business Owner</option>
+        <option value="freelancer">Freelancer</option>
+        </optgroup>
+        <optgroup label="Other">
+        <option value="secretary">Secretary</option>
+        <option value="maintenance">Maintenance</option>
+        </optgroup>
+    </select><br>
+
+        <label>Interests:</label><br>
+        <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+        <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Design</label><br>
+        <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Business</label>
+
+    </fieldset>
+    <button type="submit">Sign Up</button>
+    <button type="submit">Clear</button>
+    </form>
+</body>
+</html>
