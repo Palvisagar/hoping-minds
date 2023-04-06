@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Musical Chairs Game</title>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    }
+
+    h1 {
+    text-align: center;
+    margin-top: 30px;
+    }
+
+    #game {
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    }
+
+    #players, #chairs {
+    margin: 20px 0;
+    }
+
+    #players span, #chairs span {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-color: #ccc;
+    margin-right: 10px;
+    border-radius: 50%;
+    }
+
+    #play {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+
+    #play:hover {
+    background-color: #3E8E41;
+    }
+</style>
+</head>
+<body>
+    <h1>Musical Chairs Game</h1>
+    <div id="game">
+        <div id="players"></div>
+        <div id="chairs"></div>
+        <button id="play">Play</button>
+    </div>
+</body>
+<script>
+    // Set up the game
+var chairs = 5;
+var players = 4;
+var gameInProgress = false;
+
+function createSpan() {
+  return document.createElement("span");
+}
+
+function setupGame() {
+  // Display the chairs and players
+  var chairsDiv = document.getElementById("chairs");
+  var playersDiv = document.getElementById("players");
+  chairsDiv.innerHTML = "";
+  playersDiv.innerHTML = "";
+
+  for (var i = 0; i < chairs; i++) {
+    chairsDiv.appendChild(createSpan());
+  }
+
+  for (var i = 0; i < players; i++) {
+    playersDiv.appendChild(createSpan());
+  }
+
+  // Set up the play button
+  var playButton = document.getElementById("play");
+  playButton.innerHTML = "Play";
+  playButton.addEventListener("click", startGame);
+}
+
+// Start the game
+function startGame() {
+  // Set up the game
+  var chairsDiv = document.getElementById("chairs");
+  var chairsArray = Array.from(chairsDiv.children);
+  var currentPlayerIndex = 0;
+  var currentChairIndex = 0;
+  gameInProgress = true;
+
+  // Remove the play button
+  var playButton = document.getElementById("play");
+  playButton.removeEventListener("click", startGame);
+  playButton.style.display = "none";
+
+  // Run the game loop
+  while (gameInProgress && chairsArray.length > 1 && currentPlayerIndex < players) {
+    // Get the player and chair
+    var currentPlayer = document.getElementById("players").children[currentPlayerIndex];
+    var currentChair = chairsArray[currentChairIndex];
+
+    // Ask the player to guess the number of the chair
+    var guessCount = 0;
+    var guess = -1;
+    while (guessCount < 3 && guess !== currentChairIndex) {
+      guess = parseInt(prompt("Player " + (currentPlayerIndex + 1) + ", guess which chair number the music stopped on (1-" + chairs + ")"));
+      guessCount++;
+    }
+
+    // Check if the player guessed correctly
+    if (guess === currentChairIndex) {
+      alert("Player " + (currentPlayerIndex + 1) + " guessed correctly!");
+      chairsArray.splice(currentChairIndex, 1);
+      currentChairIndex = 0;
+    } else {
+      alert("Sorry, player " + (currentPlayerIndex + 1) + " guessed incorrectly.");
+      currentPlayerIndex++;
+      if (currentPlayerIndex === players) {
+        currentPlayerIndex = 0;
+      }
+    }
+  }
+
+  // Display the winner
+  var playersDiv = document.getElementById("players");
+  var winner = Array.from(playersDiv.children).filter(function(player, index) {
+    return index === currentPlayerIndex;
+  })[0];
+  alert("Congratulations, player " + (currentPlayerIndex + 1) + " has won!");
+  setupGame();
+}
+
+// Initialize the game
+setupGame();
+
+</script>
+</html>  
