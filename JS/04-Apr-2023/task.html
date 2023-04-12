@@ -8,6 +8,13 @@
 </head>
 <body>
     <h1>array</h1>
+<form>
+    <label for="age" class="label">Age 20-25</label>
+    <label for="age" class="label">Age 25-30</label>
+    <label for="age" class="label">Age 30-35</label>
+    <input type="checkbox" id="check"><br>
+    <input type="submit">
+</form>
 </body>
 <script>
     // create a array and add more number into array
@@ -27,10 +34,17 @@
     //     arr.push(a)
     //     console.log(arr)
     // }
-    let c=arr.filter(check)
-    function check(num){
-        num%15==0
+    // let c=arr.filter(check)
+    // function check(num){
+    //     num%15==0
+    // }
+    // console.log(num)
+    var target= document.getElementsByClassName('label')
+    for  (var i=0; i<3;i++){
+        console.log(target)
+        target[i].style.backgroundColor="blue"
     }
-    console.log(num)
+    // query selector
+    document.querySelectorAll('#check')
 </script>
 </html>

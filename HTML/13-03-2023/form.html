@@ -7,7 +7,7 @@
     <title>Form</title>
 </head>
 <body> 
-    <form>
+    <!-- <form>
         <fieldset>
             <legend>Personal detail</legend>
             <label for="name">Name</label>
@@ -51,5 +51,36 @@
             <input type="submit">
         </fieldset>
     </form>
+    <h1>volume of cyclinder<span id="res"> </span></h1>
+    <h1>volume of sphert<span id="result"> </span></h1> -->
+    <img src="../27-03-2023/gmail.png" height="140px" width="150px" id="image">
 </body>
+<script>
+// var x=document.getElementById('gender')[1]
+// console.log(x)
+
+
+// radius of cyclinder
+// let x=Number(prompt('enter the height'))
+// let y=Number(prompt('enter the redius'))
+// let vol=Math.round(Math.PI*x*x*y)
+// document.getElementById('res').innerHTML=`<i>${vol}</i>`
+
+// radius of sphert
+// let h=Number(prompt('enter the height'))
+// let r=Number(prompt('enter the redius'))
+// let sphert=Math.round(Math.PI*x*x*y)
+// document.getElementById('res').innerHTML=`<i>${sphert}</i>`
+
+var x=document.getElementById('image')
+console.log(x)
+var imgs=['../27-03-2023/gmail.png',
+        '../27-03-2023/g1.jpg',
+        '../27-03-2023/g2.jpg',
+        '../27-03-2023/g3.jpg',
+        '../27-03-2023/g4.jpg',]
+
+var img=Math.floor(Math.random()*6)
+console.log(img);
+</script>
 </html>
