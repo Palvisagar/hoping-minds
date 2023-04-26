@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        width:288px;
+        height: 200px;
+    }
+    .first{
+        text-align: center;
+        font-size: x-large;
+    }
+    .card-title{
+        text-align: center;
+        text-decoration: double;
+    }
+</style>
+<body style="margin-left: 200px;">
+    <div class="card" style="width: 18rem; border: 2px solid;" id="myDiv">
+        <img src="https://static.vecteezy.com/system/resources/previews/000/482/277/original/vector-birthday-party-announcement-invitation-poster.jpg" class="card-img-top" alt="...">
+        <div class="card-body" id="first">
+            <h5 class="card-title">Birthday Party Invitation</h5>
+            <p class="card-text">
+                It's time to celebrate my birthday again! I'm inviting you to make my birthday more colorful with your presence. Please join our party and make it memorable.
+            </p>
+            <a href="https://th.bing.com/th/id/R.35e25936c15d4fdb5d1cbccd9ab088a3?rik=CND136OUONS87A&riu=http%3a%2f%2fd2a2wjuuf1c30f.cloudfront.net%2fproduct_photos%2f55028987%2fPrincess_20Baby_20Shower_20Invitation_20_236_1_400sq.jpg&ehk=ZgrG9lsceAs%2bdJPphDbBLRHPGZ3JtV%2b6ePVKpy0ZeOg%3d&risl=&pid=ImgRaw&r=0" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+</body>
+<script>
+    let a=document.getElementById("first")
+a.style.background="white"
+document.getElementById("myDiv").style.margin = "100px 500px 30px 300px";
+console.log(a)
+
+let b=document.getElementsByClassName("card-title")
+console.log(b)
+
+for(let i=0; i<3;i++){
+    let b=document.getElementsByClassName("card-title")
+    b[i].style.color="green"
+}
+var url= "https://th.bing.com/th/id/R.35e25936c15d4fdb5d1cbccd9ab088a3?rik=CND136OUONS87A&riu=http%3a%2f%2fd2a2wjuuf1c30f.cloudfront.net%2fproduct_photos%2f55028987%2fPrincess_20Baby_20Shower_20Invitation_20_236_1_400sq.jpg&ehk=ZgrG9lsceAs%2bdJPphDbBLRHPGZ3JtV%2b6ePVKpy0ZeOg%3d&risl=&pid=ImgRaw&r=0";
+window.location = url;
+// let c=document.querySelector('#third')
+// c.style.backgroundColor="red"
+// console.log(c)
+
+// let d=document.querySelectorAll('.ex')
+// d[0].style.backgroundColor="pink"
+// console.log(d)
+</script>
+</html>

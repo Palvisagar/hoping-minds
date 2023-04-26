@@ -9,7 +9,7 @@
 <body> 
     <!-- <form>
         <fieldset>
-            <legend>Personal detail</legend>
+            <legend>Personal detail</legend>ff
             <label for="name">Name</label>
             <input type="text" id="name" placeholder="Name"><br><br>
             <label for="address">Address</label>
@@ -74,13 +74,22 @@
 
 var x=document.getElementById('image')
 console.log(x)
-var imgs=['../27-03-2023/gmail.png',
-        '../27-03-2023/g1.jpg',
-        '../27-03-2023/g2.jpg',
-        '../27-03-2023/g3.jpg',
-        '../27-03-2023/g4.jpg',]
+// change images on refresh by using array of image to used by id
+// var imgs=['../27-03-2023/gmail.png',
+//         '../27-03-2023/g1.jpg',
+//         '../27-03-2023/g2.jpg',
+//         '../27-03-2023/g3.jpg',
+//         '../27-03-2023/g4.jpg'
+//     ]
 
-var img=Math.floor(Math.random()*6)
-console.log(img);
+// var img=Math.floor(Math.random()*5)
+// document.getElementById('image').src=imgs[img]
+
+document.getElementById('image').setAttribute('alt','hello');
+let imge=document.getElementById('image')
+console.log(imge);
+
+let y=document.getElementById('image').getAttribute('id')
+console.log(y);
 </script>
 </html>
